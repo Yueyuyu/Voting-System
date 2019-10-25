@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.cqupt.educationfoundation.votingsystem.dao.ActivityDao">
+    <resultMap id="activityMap" type="cn.edu.cqupt.educationfoundation.votingsystem.model.po.ActivityPo">
+        <id property="activityId" column="id"/>
+        <result property="title" column="title"/>
+        <result property="introduction" column="introduction"/>
+        <result property="detail" column="detail"/>
+        <result property="createUserId" column="create_user_id"/>
+        <result property="deadline" column="deadline"/>
+        <result property="condition" column="condition"/>
+    </resultMap>
+
+    <sql id="activity">
+        activity_id,title,introduction,detail,create_user_id,deadline.condition
+    </sql>
+</mapper>
+   
